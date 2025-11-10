@@ -7,7 +7,7 @@ license = "MIT"
 packages = [{ include = "udo_stamps" }]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.12"
+python = ">=3.10"
 frappe = "*"
 
 [build-system]
