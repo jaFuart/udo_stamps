@@ -1,0 +1,6 @@
+include README.md
+include license.txt
+recursive-include udo_stamps *.json *.py *.js *.css *.scss *.html *.md *.txt *.csv *.png *.svg *.ico
+recursive-include udo_stamps/public *
+
+
