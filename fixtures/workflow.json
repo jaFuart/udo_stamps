@@ -1,0 +1,85 @@
+[
+  {
+    "doctype": "Workflow",
+    "workflow_name": "UDO Stamps - Stamp Application",
+    "document_type": "Stamp Application",
+    "is_active": 1,
+    "override_status": 1,
+    "states": [
+      {
+        "state": "Draft",
+        "doc_status": 0,
+        "allow_edit": "UDO User"
+      },
+      {
+        "state": "На согласовании",
+        "doc_status": 0,
+        "allow_edit": "UDO Manager"
+      },
+      {
+        "state": "Утверждена",
+        "doc_status": 0,
+        "allow_edit": "UDO Manager"
+      },
+      {
+        "state": "Выдано получателю",
+        "doc_status": 0,
+        "allow_edit": "UDO Registry Manager"
+      }
+    ],
+    "transitions": [
+      {
+        "state": "Draft",
+        "action": "Отправить на согласование",
+        "next_state": "На согласовании",
+        "allowed": "UDO User",
+        "allow_self_approval": 0
+      },
+      {
+        "state": "На согласовании",
+        "action": "Утвердить",
+        "next_state": "Утверждена",
+        "allowed": "UDO Manager",
+        "allow_self_approval": 0
+      },
+      {
+        "state": "На согласовании",
+        "action": "Отклонить",
+        "next_state": "Draft",
+        "allowed": "UDO Manager",
+        "allow_self_approval": 0
+      },
+      {
+        "state": "Утверждена",
+        "action": "Выдать получателю",
+        "next_state": "Выдано получателю",
+        "allowed": "UDO Registry Manager",
+        "allow_self_approval": 1
+      }
+    ],
+    "permissions": [
+      {
+        "role": "UDO User",
+        "state": "Draft",
+        "allow_edit": 1
+      },
+      {
+        "role": "UDO Manager",
+        "state": "На согласовании",
+        "allow_edit": 1
+      },
+      {
+        "role": "UDO Manager",
+        "state": "Утверждена",
+        "allow_edit": 1
+      },
+      {
+        "role": "UDO Registry Manager",
+        "state": "Выдано получателю",
+        "allow_edit": 1
+      }
+    ]
+  }
+]
+
+

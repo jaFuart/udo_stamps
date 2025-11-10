@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "field:title",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "status",
+  "section_requisites",
+  "company",
+  "department",
+  "stamp_type",
+  "source_kind",
+  "receiver",
+  "manufacturer_org",
+  "section_lifecycle",
+  "return_date",
+  "destruction_date",
+  "destruction_order",
+  "application",
+  "imprint_image",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "label": "title",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Статус",
+   "fieldtype": "Select",
+   "options": "Активная\nВозвращена\nУничтожена",
+   "default": "Активная",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_requisites",
+   "fieldtype": "Section Break",
+   "label": "Реквизиты"
+  },
+  {
+   "fieldname": "company",
+   "label": "Наша орг.",
+   "fieldtype": "Link",
+   "options": "Company",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "department",
+   "label": "Подразделение",
+   "fieldtype": "Link",
+   "options": "Department",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "stamp_type",
+   "label": "Тип",
+   "fieldtype": "Select",
+   "reqd": 1,
+   "options": "Печать\nШтамп",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "source_kind",
+   "label": "Выбор из",
+   "fieldtype": "Select",
+   "reqd": 1,
+   "options": "Макет\nОттиск",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "receiver",
+   "label": "Получатель печати",
+   "fieldtype": "Link",
+   "options": "Employee",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "manufacturer_org",
+   "label": "Организация изготовитель",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "section_lifecycle",
+   "fieldtype": "Section Break",
+   "label": "Завершение жизненного цикла"
+  },
+  {
+   "fieldname": "return_date",
+   "label": "Дата возврата печати",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "destruction_date",
+   "label": "Дата уничтожения печати",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "destruction_order",
+   "label": "Приказ об уничтожении",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "application",
+   "label": "Заявка на выпуск",
+   "fieldtype": "Link",
+   "options": "Stamp Application",
+   "read_only": 1
+  },
+  {
+   "fieldname": "imprint_image",
+   "label": "Оттиск",
+   "fieldtype": "Attach Image"
+  },
+  {
+   "fieldname": "note",
+   "label": "Примечание",
+   "fieldtype": "Long Text"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "module": "UDO Seals",
+ "name": "Stamp Registry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "UDO Registry Manager",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "delete": 1
+  },
+  {
+   "role": "UDO Auditor",
+   "read": 1,
+   "print": 1
+  },
+  {
+   "role": "UDO Manager",
+   "read": 1
+  },
+  {
+   "role": "UDO User",
+   "read": 0
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "desc",
+ "title_field": "title",
+ "track_changes": 1
+}
+
+

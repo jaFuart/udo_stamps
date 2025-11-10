@@ -1,0 +1,40 @@
+[
+  {
+    "doctype": "Report",
+    "report_name": "Активные печати",
+    "ref_doctype": "Stamp Registry",
+    "report_type": "Report Builder",
+    "is_standard": "No",
+    "disabled": 0,
+    "json": "{\"filters\": [{\"fieldname\": \"status\", \"label\": \"Статус\", \"condition\": \"=\", \"value\": \"Активная\"}, {\"fieldname\": \"destruction_date\", \"label\": \"Дата уничтожения печати\", \"condition\": \"isnotset\"}], \"fields\": [\"title\", \"stamp_type\", \"source_kind\", \"company\", \"department\", \"receiver\", \"status\", \"return_date\", \"destruction_date\"]}"
+  },
+  {
+    "doctype": "Report",
+    "report_name": "Возвращённые",
+    "ref_doctype": "Stamp Registry",
+    "report_type": "Report Builder",
+    "is_standard": "No",
+    "disabled": 0,
+    "json": "{\"filters\": [{\"fieldname\": \"return_date\", \"label\": \"Дата возврата печати\", \"condition\": \"isset\"}], \"fields\": [\"title\", \"stamp_type\", \"source_kind\", \"company\", \"department\", \"receiver\", \"status\", \"return_date\"]}"
+  },
+  {
+    "doctype": "Report",
+    "report_name": "Уничтоженные",
+    "ref_doctype": "Stamp Registry",
+    "report_type": "Report Builder",
+    "is_standard": "No",
+    "disabled": 0,
+    "json": "{\"filters\": [{\"fieldname\": \"destruction_date\", \"label\": \"Дата уничтожения печати\", \"condition\": \"isset\"}], \"fields\": [\"title\", \"stamp_type\", \"source_kind\", \"company\", \"department\", \"receiver\", \"status\", \"destruction_date\"]}"
+  },
+  {
+    "doctype": "Report",
+    "report_name": "Без оттиска",
+    "ref_doctype": "Stamp Registry",
+    "report_type": "Report Builder",
+    "is_standard": "No",
+    "disabled": 0,
+    "json": "{\"filters\": [{\"fieldname\": \"imprint_image\", \"label\": \"Оттиск\", \"condition\": \"isnotset\"}], \"fields\": [\"title\", \"stamp_type\", \"source_kind\", \"company\", \"department\", \"receiver\", \"status\"]}"
+  }
+]
+
+

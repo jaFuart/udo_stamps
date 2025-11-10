@@ -1,0 +1,55 @@
+[
+  {
+    "doctype": "Notification",
+    "name": "UDO Stamps - На согласование",
+    "subject": "Заявка на согласование: {{ doc.name }}",
+    "message": "Заявка {{ doc.title }} отправлена на согласование.",
+    "document_type": "Stamp Application",
+    "event": "Value Change",
+    "value_changed": "workflow_state",
+    "enabled": 1,
+    "channel": "Email",
+    "recipients": [
+      {
+        "receiver_by_role": "UDO Manager"
+      }
+    ],
+    "condition": "doc.workflow_state == 'На согласовании'"
+  },
+  {
+    "doctype": "Notification",
+    "name": "UDO Stamps - Утверждена инициатору",
+    "subject": "Заявка утверждена: {{ doc.name }}",
+    "message": "Ваша заявка {{ doc.title }} утверждена.",
+    "document_type": "Stamp Application",
+    "event": "Value Change",
+    "value_changed": "workflow_state",
+    "enabled": 1,
+    "channel": "Email",
+    "recipients": [
+      {
+        "receiver_by_document_field": "owner"
+      }
+    ],
+    "condition": "doc.workflow_state == 'Утверждена'"
+  },
+  {
+    "doctype": "Notification",
+    "name": "UDO Stamps - Выдано получателю",
+    "subject": "Получить заказ: {{ doc.title }}",
+    "message": "Заказ выдан. Просьба получить печать/штамп.",
+    "document_type": "Stamp Application",
+    "event": "Value Change",
+    "value_changed": "workflow_state",
+    "enabled": 1,
+    "channel": "Email",
+    "recipients": [
+      {
+        "receiver_by_document_field": "owner"
+      }
+    ],
+    "condition": "doc.workflow_state == 'Выдано получателю'"
+  }
+]
+
+

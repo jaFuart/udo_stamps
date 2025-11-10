@@ -1,0 +1,22 @@
+[
+  {
+    "doctype": "Print Format",
+    "name": "UDO - Заявка на изготовление печати/штампа",
+    "doc_type": "Stamp Application",
+    "print_format_type": "Jinja",
+    "disabled": 0,
+    "custom_format": 1,
+    "html": "<h3>Заявка на изготовление печати/штампа</h3><p><b>Заголовок:</b> {{ doc.title }}</p><p><b>Вид документа:</b> {{ doc.document_kind }}</p><p><b>Организация:</b> {{ doc.company }}{% if doc.department %} / {{ doc.department }}{% endif %}</p><p><b>Тип/Выбор из:</b> {{ doc.stamp_type }} / {{ doc.source_kind }}</p><p><b>Получатель:</b> {{ frappe.db.get_value('Employee', doc.receiver, 'employee_name') }}</p><p><b>Основание:</b> {{ doc.basis }}</p>{% if doc.justification_other %}<p><b>Обоснование (Иное):</b> {{ doc.justification_other }}</p>{% endif %}{% if doc.justification_loss %}<p><b>Обоснование (при утрате):</b> {{ doc.justification_loss }}</p>{% endif %}{% if doc.manufacturer_org %}<p><b>Орг-изготовитель:</b> {{ doc.manufacturer_org }}</p>{% endif %}{% if doc.received_date %}<p><b>Дата получения:</b> {{ doc.received_date }}</p>{% endif %}{% if doc.return_date %}<p><b>Дата возврата:</b> {{ doc.return_date }}</p>{% endif %}{% if doc.destruction_date %}<p><b>Дата уничтожения:</b> {{ doc.destruction_date }}</p>{% endif %}{% if doc.note %}<p><b>Примечание:</b> {{ doc.note }}</p>{% endif %}<hr><p>Подпись инициатора: ____________________</p><p>Подпись согласующего: ____________________</p>"
+  },
+  {
+    "doctype": "Print Format",
+    "name": "UDO - Карточка реестра печати/штампа",
+    "doc_type": "Stamp Registry",
+    "print_format_type": "Jinja",
+    "disabled": 0,
+    "custom_format": 1,
+    "html": "<h3>Карточка реестра печати/штампа</h3><p><b>Заголовок:</b> {{ doc.title }}</p><p><b>Статус:</b> {{ doc.status }}</p><p><b>Организация:</b> {{ doc.company }}{% if doc.department %} / {{ doc.department }}{% endif %}</p><p><b>Тип/Выбор из:</b> {{ doc.stamp_type }} / {{ doc.source_kind }}</p><p><b>Получатель:</b> {{ frappe.db.get_value('Employee', doc.receiver, 'employee_name') }}</p>{% if doc.manufacturer_org %}<p><b>Орг-изготовитель:</b> {{ doc.manufacturer_org }}</p>{% endif %}{% if doc.return_date %}<p><b>Дата возврата:</b> {{ doc.return_date }}</p>{% endif %}{% if doc.destruction_date %}<p><b>Дата уничтожения:</b> {{ doc.destruction_date }}</p>{% endif %}{% if doc.note %}<p><b>Примечание:</b> {{ doc.note }}</p>{% endif %}{% if doc.imprint_image %}<div><img src='{{ doc.imprint_image }}' style='max-width:200px;'></div>{% endif %}"
+  }
+]
+
+

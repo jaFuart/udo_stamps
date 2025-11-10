@@ -1,0 +1,232 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "autoname": "field:title",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_requisites",
+  "document_kind",
+  "company",
+  "department",
+  "stamp_type",
+  "source_kind",
+  "section_sample",
+  "make_from_sample",
+  "section_receiver",
+  "receiver",
+  "section_basis",
+  "basis",
+  "justification_other",
+  "justification_loss",
+  "attachments",
+  "section_maker_dates",
+  "manufacturer_org",
+  "received_date",
+  "section_lifecycle",
+  "return_date",
+  "destruction_date",
+  "destruction_order",
+  "section_other",
+  "extra_info",
+  "note",
+  "title"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "label": "title",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_requisites",
+   "fieldtype": "Section Break",
+   "label": "Реквизиты"
+  },
+  {
+   "fieldname": "document_kind",
+   "label": "Вид документа",
+   "fieldtype": "Select",
+   "reqd": 1,
+   "options": "Заявка на изготовление печати\nЗаявка на изготовление штампа"
+  },
+  {
+   "fieldname": "company",
+   "label": "Наша орг.",
+   "fieldtype": "Link",
+   "reqd": 1,
+   "options": "Company",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "department",
+   "label": "Подразделение",
+   "fieldtype": "Link",
+   "options": "Department"
+  },
+  {
+   "fieldname": "stamp_type",
+   "label": "Тип",
+   "fieldtype": "Select",
+   "reqd": 1,
+   "options": "Печать\nШтамп",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "source_kind",
+   "label": "Выбор из",
+   "fieldtype": "Select",
+   "reqd": 1,
+   "options": "Макет\nОттиск",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_sample",
+   "fieldtype": "Section Break",
+   "label": "Образец/реестр"
+  },
+  {
+   "fieldname": "make_from_sample",
+   "label": "Изготовить по образцу",
+   "fieldtype": "Link",
+   "options": "Stamp Registry"
+  },
+  {
+   "fieldname": "section_receiver",
+   "fieldtype": "Section Break",
+   "label": "Получатель"
+  },
+  {
+   "fieldname": "receiver",
+   "label": "Получатель печати",
+   "fieldtype": "Link",
+   "options": "Employee",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "section_basis",
+   "fieldtype": "Section Break",
+   "label": "Основание и обоснование"
+  },
+  {
+   "fieldname": "basis",
+   "label": "Основание для изготовления",
+   "fieldtype": "Select",
+   "reqd": 1,
+   "options": "Приказ о создании обособленного подразделения\nПриказ о переименовании структурного подразделения\nВыписка из ЕГРЮЛ (названия компании)\nДеформация оттиска печати / поломка оснастки\nУтеря печати, штампа\nНеобходимость в дополнительной печати\nИное"
+  },
+  {
+   "fieldname": "justification_other",
+   "label": "Обоснование (Иное)",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "justification_loss",
+   "label": "Обоснование (при утрате)",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "attachments",
+   "label": "Приложения-основания",
+   "fieldtype": "Table",
+   "options": "Stamp Application Attachment"
+  },
+  {
+   "fieldname": "section_maker_dates",
+   "fieldtype": "Section Break",
+   "label": "Изготовитель и даты"
+  },
+  {
+   "fieldname": "manufacturer_org",
+   "label": "Организация изготовитель",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "received_date",
+   "label": "Дата получения печати от изготовителя",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "section_lifecycle",
+   "fieldtype": "Section Break",
+   "label": "Завершение жизненного цикла"
+  },
+  {
+   "fieldname": "return_date",
+   "label": "Дата возврата печати",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "destruction_date",
+   "label": "Дата уничтожения печати",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "destruction_order",
+   "label": "Приказ об уничтожении",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "section_other",
+   "fieldtype": "Section Break",
+   "label": "Прочее"
+  },
+  {
+   "fieldname": "extra_info",
+   "label": "Дополнительная информация на печати",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "note",
+   "label": "Примечание",
+   "fieldtype": "Long Text"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "module": "UDO Seals",
+ "name": "Stamp Application",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "UDO User",
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "if_owner": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "UDO Manager",
+   "read": 1,
+   "write": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "UDO Registry Manager",
+   "read": 1,
+   "write": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "UDO Auditor",
+   "read": 1,
+   "print": 1
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "desc",
+ "title_field": "title",
+ "track_changes": 1
+}
+
+

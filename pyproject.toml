@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "udo_stamps"
+version = "0.0.1"
+description = "Печати и штампы — управление заявками и реестром"
+authors = ["UDO"]
+license = "MIT"
+packages = [{ include = "udo_stamps" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+frappe = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+

@@ -1,0 +1,34 @@
+[
+  {
+    "doctype": "Workspace",
+    "label": "Печати и штампы",
+    "module": "UDO Seals",
+    "public": 1,
+    "is_hidden": 0,
+    "for_user": "",
+    "content": "",
+    "links": [
+      {
+        "label": "Заявки",
+        "link_type": "DocType",
+        "link_to": "Stamp Application",
+        "is_query_report": 0
+      },
+      {
+        "label": "Реестр",
+        "link_type": "DocType",
+        "link_to": "Stamp Registry",
+        "is_query_report": 0
+      },
+      {
+        "label": "Активные печати",
+        "link_type": "Report",
+        "link_to": "Активные печати",
+        "for_doctype": "Stamp Registry",
+        "is_query_report": 0
+      }
+    ]
+  }
+]
+
+
